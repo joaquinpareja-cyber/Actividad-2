@@ -25,6 +25,19 @@ header {
     color: #ecf0f1;
 }
 
+/* Logo con imagen */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centra logo + título */
+    gap: 15px; /* espacio entre imagen y texto */
+}
+
+.logo-img {
+    width: 50px;   /* ajusta tamaño del logo */
+    height: 50px;  /* mismo alto para uniformidad */
+    object-fit: contain; /* mantiene proporción */
+}
 
 nav ul {
     list-style: none;
@@ -79,7 +92,7 @@ main h2 {
 }
 
 .card {
-    background-color: #ecf0f1;
+    background-color: #bac4c7;
     padding: 20px;
     border-radius: 10px;
     width: 250px;
@@ -126,5 +139,98 @@ footer p {
     background: linear-gradient(135deg, #f39c12, #d35400);
     transform: scale(1.1);
     box-shadow: 0px 4px 12px rgba(0,0,0,0.4);
+}
+.card {
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-back {
+  background-color: #6aa5d6;
+  color: #333;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* SERVICIOS */
+#servicios {
+    margin: 40px auto;
+    text-align: center;
+}
+
+#servicios h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.servicios-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.servicio-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    width: 250px;
+    padding: 15px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicio-card img {
+    width: 100%;          
+    height: 160px;        
+    object-fit: cover;    
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+.servicio-card h3 {
+    margin: 10px 0;
+    color: #2980b9;
+}
+
+.servicio-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.servicio-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 16px rgba(0,0,0,0.3);
 }
 
