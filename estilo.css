@@ -91,3 +91,40 @@ main h2 {
     transform: scale(1.05);
 }
 
+/* FOOTER */
+footer {
+    background-color: #34495e;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer h2 {
+    color: #f1c40f;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Botones de redes sociales */
+.btn-red {
+    display: inline-block;
+    margin: 8px;
+    padding: 10px 15px;
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-red:hover {
+    background: linear-gradient(135deg, #f39c12, #d35400);
+    transform: scale(1.1);
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.4);
+}
+
