@@ -30,4 +30,15 @@ document.addEventListener("DOMContentLoaded", () => {
             btn.style.transform = "rotate(0) scale(1)";
         });
     });
+
+    // --- Mejora de Servicios ---
+    // Animación para tarjetas de servicios
+    const servicios = document.querySelectorAll(".servicio-card");
+    servicios.forEach((card, i) => {
+        card.style.opacity = 0;
+        setTimeout(() => {
+            card.style.transition = "opacity 1.5s ease-in-out";
+            card.style.opacity = 1;
+        }, 500 * (i + 1));
+    });
 });
